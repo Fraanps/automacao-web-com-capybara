@@ -12,16 +12,10 @@ Dado('que estou na página principal da Starbugs') do
   visit 'https://starbugs.vercel.app/'
 end
 
-Dado('que desejo comprar um café {string}') do |product_name|
-  @product_name = product_name
-end
-
-Dado('que esse produto custa {string}') do |product_price|
-  @product_price =  product_price
-end
-
-Dado('que o custo de entrega é de {string}') do |delivery_price|
-  @delivery_price = delivery_price
+Dado('que desejo comprar o seguinte produto') do |table|
+  @product_name = table.hashes[0][:product]
+  @product_price =  table.hashes[0][:price]
+  @delivery_price = table.hashes[0][:delivery]
 end
 
 Quando('inicio a compra desse item') do
@@ -44,6 +38,9 @@ end
 Então('o valor total da compra deve ser {string}') do |total_price|
   price = find('.total-price')
   expect(price.text).to eql total_price
-  
-  
+end
+
+Então('devo ver um popup informando que o produto está indisponível') do
+  popup = find('.swal2-html-container')
+  expect(popup.text).to eql'Produto indisponível'
 end
