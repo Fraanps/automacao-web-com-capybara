@@ -1,5 +1,7 @@
 #language: pt
 
+# camada de especificação
+
 Funcionalidade: Catalogo de cafés
     Como um usuário do site starbugs, eu quero ver o catálogo de cafés na página principal
     Para que eu possa escolher e saber mais sobre os produtos disponíveis
@@ -19,7 +21,6 @@ Cenário: Iniciar a compra de um café
     Então devo ver a página de checkout com os detalhes do produto
         E o valor total da compra deve ser "R$ 19,99"
 
-@temp
 Cenário: Café indisponível
     Dado que estou na página principal da Starbugs
         E que desejo comprar o seguinte produto
