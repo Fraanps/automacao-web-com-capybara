@@ -8,7 +8,7 @@ class HomePage
     # propriedades ou funções que vão representar elementos ou funcionalidades da página
 
     def open
-        visit 'https://starbugs.vercel.app/'
+        visit 'https://starbugs-qa.vercel.app/'
     end
 
     def coffe_list
