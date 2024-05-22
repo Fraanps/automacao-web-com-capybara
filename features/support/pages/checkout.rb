@@ -19,4 +19,25 @@ class CheckoutPage
         price = find('.total-price')
         expect(price.text).to eql total_price
     end
+
+    def find_zipcode(zipcode)
+        find('input[name=cep]').set(zipcode)
+        # find('input[type=button]').click - clickar no botão de buscar cep
+        click_on 'Buscar CEP'
+    end
+
+    def fill_address(address)
+        find('input[name=number]').set(address[:number])
+        find('input[name=complement]').set(address[:details])
+    end
+
+    def choice_payment(payment_type)
+        find('label div', text: payment_type.upcase).click
+    end
+
+    def finalize_purchase()
+        click_on 'Confirmar pedido'
+    end
+
+
 end
