@@ -1,7 +1,7 @@
-### Sobre
+### Sobre 📝
 Repositório do projeto de testes automatizados do sistema starbugs, feito no curso Cucumber eXperience!
 
-### Tecnologias
+### Tecnologias 🛠️
 * Capybara
 * Cucumber
 * RSpec
@@ -9,7 +9,7 @@ Repositório do projeto de testes automatizados do sistema starbugs, feito no cu
 * Selenium Webdriver
 
 
-### Como executar
+### Como executar 💻
 1. Clonar o repositório
 ```
 bundle install
@@ -25,7 +25,7 @@ bundle exec cucumber
 bundle exec cucumber -t @smoke
 ```
 
-### Diferentes tipos de saída dos resultados dos testes
+### Diferentes tipos de saída dos resultados dos testes 💭
 1. Em formato XML (logs - é o nome da pasta onde quer salvar o arquivo, pode renomea-la)
 ```
 bundle exec cucumber -f junit -o logs
