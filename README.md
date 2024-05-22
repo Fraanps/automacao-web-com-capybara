@@ -14,7 +14,7 @@ Repositório do projeto de testes automatizados do sistema starbugs, feito no cu
 ```
 bundle install
 ```
-2. Executar testes
+2. Executar testes de regressão
 ```
 bundle exec cucumber
 ```
