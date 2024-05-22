@@ -4,8 +4,8 @@ Dado('que iniciei a compra do item:') do |table|
     @home.buy(product[:name]) 
 end
   
-Quando('aplico o seguinte cupom: {string}') do |cupom_name|
-    @checkout.apply_discount(cupom_name)
+Quando('aplico o seguinte cupom: {string}') do |cupom|
+    @checkout.apply_discount(cupom)
     
 end
   
